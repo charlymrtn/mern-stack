@@ -113,7 +113,7 @@ class App extends Component {
         <nav className="light-blue darken-4">
           <div className="container">
             <div className="nav-wrapper">
-              <a href="#" className="brand-logo">MERN Stack</a>
+              <a href="#" className="brand-logo">MERN Pajaro</a>
             </div>
           </div>
         </nav>
@@ -126,17 +126,17 @@ class App extends Component {
                   <form onSubmit={this.addTask}>
                     <div className="row">
                       <div className="input-field col s12">
-                        <input name="title" onChange={this.handleChange} value={this.state.title} type="text" placeholder="Task Title" autoFocus/>
+                        <input name="title" onChange={this.handleChange} value={this.state.title} type="text" placeholder="titulo tarea" autoFocus/>
                       </div>
                     </div>
                     <div className="row">
                       <div className="input-field col s12">
-                        <textarea name="description" onChange={this.handleChange} value={this.state.description} cols="30" rows="10" placeholder="Task Description" className="materialize-textarea"></textarea>
+                        <textarea name="description" onChange={this.handleChange} value={this.state.description} cols="30" rows="10" placeholder="descripcion tarea" className="materialize-textarea"></textarea>
                       </div>
                     </div>
 
                     <button type="submit" className="btn light-blue darken-4">
-                      Send 
+                      Enviar 
                     </button>
                   </form>
                 </div>
@@ -146,8 +146,8 @@ class App extends Component {
               <table>
                 <thead>
                   <tr>
-                    <th>Title</th>
-                    <th>Description</th>
+                    <th>Titulo</th>
+                    <th>Descripcion</th>
                   </tr>
                 </thead>
                 <tbody>
