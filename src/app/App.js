@@ -37,7 +37,9 @@ class App extends Component {
       })
         .then(res => res.json())
         .then(data => {
-          window.M.toast({html: 'Task Updated'});
+          window.M.toast({
+            html: 'Tarea actualizada'
+          });
           this.setState({_id: '', title: '', description: ''});
           this.fetchTasks();
         });
@@ -53,7 +55,7 @@ class App extends Component {
         .then(res => res.json())
         .then(data => {
           console.log(data);
-          window.M.toast({html: 'Task Saved'});
+          window.M.toast({html: 'Tarea guardada'});
           this.setState({title: '', description: ''});
           this.fetchTasks();
         })
@@ -63,7 +65,7 @@ class App extends Component {
   }
 
   deleteTask(id) {
-    if(confirm('Are you sure you want to delete it?')) {
+    if(confirm('Estás seguro de borrar la tarea?')) {
       fetch(`/api/tasks/${id}`, {
         method: 'DELETE',
         headers: {
@@ -74,7 +76,9 @@ class App extends Component {
         .then(res => res.json())
         .then(data => {
           console.log(data);
-          M.toast({html: 'Task deleted'});
+          M.toast({
+            html: 'Tarea borrada'
+          });
           this.fetchTasks();
         });
     }
